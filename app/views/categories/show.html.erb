@@ -1,5 +1,9 @@
-<h1>Category: <%= @category.name %></h1>
 <% @category.recipes.each do |recipe| %>
-    <%= recipe.name %>
-    <br>
+  <%= recipe.name %>
+  <br>
+  Category: <%= recipe.category.name %>
+  <% @category = recipe.category %>
+  <%= button_to('Delete recipe', recipe_path(recipe), method: :delete, data: {confirm: 'Delete recipe? Are you sure?'} ) %>
+  <%= link_to("Show me this recipe", recipe_path(recipe)) %>
+  <br><br>
 <% end %>
