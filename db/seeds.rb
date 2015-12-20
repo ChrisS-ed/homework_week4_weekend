@@ -10,6 +10,15 @@ Recipe.create!(name: 'Slow-cooked lamb with onions & thyme', description: 'Five 
 Recipe.create!(name: 'Smoked salmon & pea frittata', description: 'A great dish for the spring, with the combination of smoked salmon and eggs giving this dish an interesting flavour.', instructions: '1. Thickly slice the potatoes and cook in a pan of boiling salted water until just tender, about 10 minutes. Drain well and leave to cool slightly.', category_id: 2)
 Recipe.create!(name: 'Very berry ice', description: 'Try this fruity iced pud - a fantastic and fat-free dinner party dessert.', instructions: '1. Hull and chop fruit, then tip them into a bowl with the sugar and lemon juice. Bring a kettle of hot water to the boil and pour over 300ml boiling water. Leave everything to macerate until cool, then blitz in a food processor until smooth. Push the purée through a sieve.', category_id: 3)
 
+Ingredient.delete_all
+
+Ingredient.create!(name: 'new potatoes', quantity: '500g')
+Ingredient.create!(name: 'smoked salmon', quantity: '200g')
+Ingredient.create!(name: 'large eggs', quantity: '8')
+Ingredient.create!(name: 'chopped dill', quantity: '2tbsp')
+Ingredient.create!(name: 'frozen petits pois', quantity: '100g')
+
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
