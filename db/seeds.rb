@@ -18,6 +18,7 @@ Ingredient.create!(name: 'large eggs', quantity: '8')
 Ingredient.create!(name: 'chopped dill', quantity: '2tbsp')
 Ingredient.create!(name: 'frozen petits pois', quantity: '100g')
 
+Recipe.find(1).ingredients << Ingredient.all
 
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
